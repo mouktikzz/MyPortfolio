@@ -57,7 +57,7 @@ a:hover {
 }
 
 .logo:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 /*Ham Menu*/
@@ -282,7 +282,6 @@ img {
 .about-details-container {
   display: flex;
 }
-
 
 /* .about-pic {
   border-radius: 2rem;
