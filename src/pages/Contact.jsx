@@ -1,10 +1,6 @@
 import React from 'react';
+import ContactSection from '../components/ContactSection';
 
-export default function Contact() {
-  return (
-    <section>
-      <h1>Contact</h1>
-      <p>Feel free to reach out via email or LinkedIn!</p>
-    </section>
-  );
+export default function ContactPage() {
+  return <ContactSection />;
 } 

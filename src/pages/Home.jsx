@@ -1,10 +1,18 @@
 import React from 'react';
+import Profile from '../components/Profile';
+import About from '../components/About';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import ContactSection from '../components/ContactSection';
 
 export default function Home() {
   return (
-    <section>
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is the home page. Explore my work and experience!</p>
-    </section>
+    <>
+      <Profile />
+      <About />
+      <Skills />
+      <Projects />
+      <ContactSection />
+    </>
   );
 } 

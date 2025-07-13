@@ -1,10 +1,6 @@
 import React from 'react';
+import Skills from '../components/Skills';
 
-export default function Skills() {
-  return (
-    <section>
-      <h1>Skills</h1>
-      <p>These are the technologies and tools I work with.</p>
-    </section>
-  );
+export default function SkillsPage() {
+  return <Skills />;
 } 

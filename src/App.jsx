@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
-import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
 const navStyle = {
@@ -19,12 +18,39 @@ const navStyle = {
 
 const linkStyle = {
   textDecoration: 'none',
-  color: '#222',
+  color: 'var(--color-text)',
   fontWeight: 500,
   fontSize: '1rem',
 };
 
+const toggleStyle = {
+  marginLeft: 'auto',
+  padding: '0.4rem 1rem',
+  borderRadius: 6,
+  border: 'none',
+  background: 'var(--color-nav-hover)',
+  color: 'var(--color-primary)',
+  fontWeight: 600,
+  cursor: 'pointer',
+  fontSize: '1rem',
+  transition: 'background 0.2s, color 0.2s',
+};
+
 function App() {
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+
+  useEffect(() => {
+    if (dark) {
+      document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [dark]);
+
   return (
     <Router>
       <div style={{ fontFamily: 'sans-serif', margin: 0, padding: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -35,8 +61,14 @@ function App() {
             <Link to="/about" style={linkStyle}>About</Link>
             <Link to="/projects" style={linkStyle}>Projects</Link>
             <Link to="/skills" style={linkStyle}>Skills</Link>
-            <Link to="/resume" style={linkStyle}>Resume</Link>
             <Link to="/contact" style={linkStyle}>Contact</Link>
+            <button
+              style={toggleStyle}
+              onClick={() => setDark((d) => !d)}
+              aria-label="Toggle dark mode"
+            >
+              {dark ? '🌙 Dark' : '☀️ Light'}
+            </button>
           </nav>
         </header>
         <main style={{ flex: 1, padding: '2rem', width: '100%', maxWidth: 900, margin: '0 auto' }}>
@@ -45,7 +77,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
