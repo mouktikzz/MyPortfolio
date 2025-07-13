@@ -13,11 +13,8 @@ export default function Profile() {
       <div style={{ flex: 1, minWidth: 250 }}>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)' }}>Hello, I'm</p>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 700, margin: '0.5rem 0', color: 'var(--color-primary)' }}>Mouktik</h1>
-        <p style={{ fontSize: '1.3rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem' }}>Developer</p>
-        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-          {/* Buttons removed as requested */}
-        </div>
-        <div style={{ display: 'flex', gap: '2.2rem', alignItems: 'center', marginTop: '2rem', marginBottom: '0.5rem' }}>
+        <p style={{ fontSize: '1.3rem', color: 'var(--color-text-secondary)', marginBottom: '0.7rem' }}>AI Enthusiast</p>
+        <div style={{ display: 'flex', gap: '2.2rem', alignItems: 'center', margin: '0 0 1.5rem 0' }}>
           <a href="https://www.github.com/steezyneo" target="_blank" rel="noopener noreferrer">
             <img src="/github.png" alt="GitHub" style={{ width: 36, height: 36 }} />
           </a>
@@ -25,6 +22,7 @@ export default function Profile() {
             <img src="/linkedin.png" alt="LinkedIn" style={{ width: 36, height: 36 }} />
           </a>
         </div>
+        {/* Buttons removed as requested */}
       </div>
     </section>
   );

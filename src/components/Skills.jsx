@@ -2,39 +2,32 @@ import React from 'react';
 
 const skills = [
   {
-    category: 'Full Stack Web Development',
-    items: [
-      { name: 'HTML', level: 'Intermediate' },
-      { name: 'CSS', level: 'Intermediate' },
-      { name: 'JavaScript', level: 'Intermediate' },
-      { name: 'SQL', level: 'Intermediate' },
-      { name: 'WordPress', level: 'Basic' },
-    ],
+    category: 'Languages',
+    items: ['Python', 'SQL', 'Java', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    category: 'Libraries & Frameworks',
+    items: ['Numpy', 'Pandas', 'Scikit-learn', 'Streamlit'],
+  },
+  {
+    category: 'Tools',
+    items: ['GitHub', 'Android Studio'],
+  },
+  {
+    category: 'Soft Skills',
+    items: ['Team Work', 'Adaptability', 'Time Management'],
   },
   {
     category: 'Game Development',
-    items: [
-      { name: 'UNITY 2D', level: 'Intermediate' },
-      { name: 'C#', level: 'Intermediate' },
-    ],
+    items: ['UNITY 2D', 'C#'],
   },
   {
     category: 'Penetration Testing',
-    items: [
-      { name: 'Kali Linux', level: 'Intermediate' },
-      { name: 'NMAP', level: 'Intermediate' },
-      { name: 'BurpSuite', level: 'Intermediate' },
-      { name: 'Metasploit', level: 'Basic' },
-      { name: 'Nessus', level: 'Basic' },
-    ],
+    items: ['Kali Linux', 'NMAP', 'BurpSuite', 'Metasploit', 'Nessus'],
   },
   {
     category: 'Graphic Designing',
-    items: [
-      { name: 'Photoshop', level: 'Experienced' },
-      { name: 'Premiere Pro', level: 'Intermediate' },
-      { name: 'Blender', level: 'Beginner' },
-    ],
+    items: ['Photoshop', 'Premiere Pro', 'Blender'],
   },
 ];
 
@@ -44,14 +37,24 @@ export default function Skills() {
       <h2>Skillset</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
         {skills.map((group) => (
-          <div key={group.category} style={{ flex: 1, minWidth: 220, background: 'var(--color-card-alt)', borderRadius: 8, padding: '1rem' }}>
+          <div
+            key={group.category}
+            style={{
+              flex: 1,
+              minWidth: 220,
+              background: 'var(--color-card-alt)',
+              borderRadius: 8,
+              padding: '1.2rem',
+              border: '1.5px solid var(--color-border)',
+              boxShadow: '0 4px 16px rgba(29, 78, 216, 0.10)',
+              color: 'var(--color-text)',
+            }}
+          >
             <h3 style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>{group.category}</h3>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {group.items.map((item) => (
-                <li key={item.name} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-                  <img src="/checkmark.png" alt="check" style={{ width: 20, height: 20, marginRight: 8 }} />
-                  <span style={{ fontWeight: 500 }}>{item.name}</span>
-                  <span style={{ marginLeft: 'auto', color: '#555', fontSize: '0.95rem' }}>{item.level}</span>
+                <li key={item} style={{ marginBottom: 8, fontWeight: 500, fontSize: '1.08rem', display: 'flex', alignItems: 'center' }}>
+                  <span style={{ marginRight: 8, fontSize: '1.1rem' }}>•</span> {item}
                 </li>
               ))}
             </ul>
