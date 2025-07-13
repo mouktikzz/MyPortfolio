@@ -7,8 +7,8 @@ export default function ContactSection() {
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <img src="/email.png" alt="email" style={{ width: 28, height: 28 }} />
-          <a href="mailto:d.mouktik1905@outlook.com" style={{ fontSize: '1.1rem', color: '#1d4ed8', textDecoration: 'none', fontWeight: 500 }}>
-            d.mouktik1905@outlook.com
+          <a href="mailto:mouktik.d@gmail.com" style={{ fontSize: '1.1rem', color: '#1d4ed8', textDecoration: 'none', fontWeight: 500 }}>
+            mouktik.d@gmail.com
           </a>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
