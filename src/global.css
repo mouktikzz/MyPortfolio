@@ -1,0 +1,95 @@
+/* CSS Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1d4ed8;
+}
+
+p, li {
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.25rem;
+  }
+  nav {
+    gap: 0.75rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+} 
