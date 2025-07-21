@@ -15,14 +15,13 @@ export default function Profile() {
         <h1 style={{ fontSize: '2.5rem', fontWeight: 700, margin: '0.5rem 0', color: 'var(--color-primary)' }}>Mouktik</h1>
         <p style={{ fontSize: '1.3rem', color: 'var(--color-text-secondary)', marginBottom: '0.7rem' }}>AI Enthusiast</p>
         <div style={{ display: 'flex', gap: '2.2rem', alignItems: 'center', margin: '0 0 1.5rem 0' }}>
-          <a href="https://www.github.com/steezyneo" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/mouktikzz" target="_blank" rel="noopener noreferrer">
             <img src="/github.png" alt="GitHub" style={{ width: 36, height: 36 }} />
           </a>
           <a href="https://www.linkedin.com/in/mouktikdasari/" target="_blank" rel="noopener noreferrer">
             <img src="/linkedin.png" alt="LinkedIn" style={{ width: 36, height: 36 }} />
           </a>
         </div>
-        {/* Buttons removed as requested */}
       </div>
     </section>
   );

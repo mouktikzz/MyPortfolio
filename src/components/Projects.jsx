@@ -31,19 +31,19 @@ const otherProjects = [
   {
     title: 'Angry Birds Clone',
     image: '/angry-birds.jpg',
-    link: 'https://github.com/steezyneo/Angry-Birds-Clone',
+    link: 'https://github.com/mouktikzz/Angry-Birds-Clone',
     linkLabel: 'GitHub',
   },
   {
     title: 'Fruit Ninja Clone',
     image: '/fruit-ninja.jpg',
-    link: 'https://github.com/steezyneo',
+    link: 'https://github.com/mouktikzz',
     linkLabel: 'GitHub',
   },
   {
     title: 'Color Switch Clone',
     image: '/color-swich.png',
-    link: 'https://github.com/steezyneo',
+    link: 'https://github.com/mouktikzz',
     linkLabel: 'GitHub',
   },
 ];
